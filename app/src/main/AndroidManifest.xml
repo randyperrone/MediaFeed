@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Controllers.YoutubeActivity" />
-        <activity android:name=".Controllers.YoutubePlayerActivity"></activity>
+        <activity android:name=".Controllers.YoutubePlayerActivity" />
+        <activity android:name=".Controllers.InstagramActivity"></activity>
     </application>
 
 </manifest>

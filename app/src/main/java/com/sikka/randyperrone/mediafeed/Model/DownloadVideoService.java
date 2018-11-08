@@ -25,6 +25,7 @@ import static com.sikka.randyperrone.mediafeed.Model.Consts.API_SNIPPET;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_THUMBNAILS;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_TITLE;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_URL;
+import static com.sikka.randyperrone.mediafeed.Model.Consts.API_VIDEOID;
 
 public class DownloadVideoService {
     private final String TAG = "DownloadVideoService";
@@ -58,7 +59,7 @@ public class DownloadVideoService {
                                     JSONObject thumbnails = snippet.getJSONObject(API_THUMBNAILS);
                                     JSONObject medium = thumbnails.getJSONObject(API_MEDIUM);
                                     JSONObject resourceId = snippet.getJSONObject(API_RESOURCEID);
-                                    id = resourceId.getString(API_ID);
+                                    id = resourceId.getString(API_VIDEOID);
                                     url = medium.getString(API_URL);
                                 }
                                 if(id != null && title != null && description != null && url != null){

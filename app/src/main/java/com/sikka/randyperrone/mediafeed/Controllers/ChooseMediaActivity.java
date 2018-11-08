@@ -11,6 +11,7 @@ import com.sikka.randyperrone.mediafeed.R;
 
 public class ChooseMediaActivity extends AppCompatActivity {
     private ImageButton youtubeButton;
+    private ImageButton instagramButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class ChooseMediaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose_media);
 
         youtubeButton = (ImageButton)findViewById(R.id.goto_youtube_button);
-        //TODO do instagram button and add logo in res
+        instagramButton = (ImageButton)findViewById(R.id.goto_insta_button);
 
         youtubeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +28,13 @@ public class ChooseMediaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        instagramButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), InstagramActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
