@@ -21,13 +21,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/white"
             android:src="@drawable/yt_logo_rgb_light" />
 
         <ImageButton
             android:id="@+id/goto_insta_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:src="@drawable/instagramlogo"
+            android:background="@color/white"/>
 
     </LinearLayout>
 
