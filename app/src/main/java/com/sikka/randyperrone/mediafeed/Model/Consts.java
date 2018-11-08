@@ -8,7 +8,8 @@ public final class Consts {
     public static final String API_THUMBNAILS = "thumbnails";
     public static final String API_MEDIUM = "medium";
     public static final String API_URL = "url";
-    public static final String API_ID = "id";
+    public static final String API_ID = "videoId";
+    public static final String API_RESOURCEID = "resourceId";
 
 
 }

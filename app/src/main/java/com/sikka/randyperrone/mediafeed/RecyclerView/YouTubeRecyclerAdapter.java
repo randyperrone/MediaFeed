@@ -1,11 +1,13 @@
 package com.sikka.randyperrone.mediafeed.RecyclerView;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.sikka.randyperrone.mediafeed.Controllers.YoutubePlayerActivity;
 import com.sikka.randyperrone.mediafeed.Model.Video;
 import com.sikka.randyperrone.mediafeed.R;
 
@@ -39,7 +41,14 @@ public class YouTubeRecyclerAdapter extends RecyclerView.Adapter<YouTubeRecycler
         holder.setDescription(description);
         holder.setTitle(title);
         holder.setThumbnail(url);
-        //TODO make it clickable to next view
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), YoutubePlayerActivity.class);
+                intent.putExtra("video", video);
+                view.getContext().startActivity(intent);
+            }
+        });
 
     }
 

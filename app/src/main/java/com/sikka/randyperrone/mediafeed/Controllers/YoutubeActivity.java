@@ -14,10 +14,6 @@ public class YoutubeActivity extends AppCompatActivity implements ListVideosFrag
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
 
-        /*android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
-        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, new ListVideosFragment());
-        fragmentTransaction.commit();*/
         ListVideosFragment fragment = new ListVideosFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
     }

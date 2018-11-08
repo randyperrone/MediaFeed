@@ -20,6 +20,7 @@ import static com.sikka.randyperrone.mediafeed.Model.Consts.API_DESCRIPTION;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_ID;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_ITEMS;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_MEDIUM;
+import static com.sikka.randyperrone.mediafeed.Model.Consts.API_RESOURCEID;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_SNIPPET;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_THUMBNAILS;
 import static com.sikka.randyperrone.mediafeed.Model.Consts.API_TITLE;
@@ -51,12 +52,13 @@ public class DownloadVideoService {
                                 String description = "";
                                 String url = "";
                                 if(item != null){
-                                    id = item.getString(API_ID);
                                     JSONObject snippet = item.getJSONObject(API_SNIPPET);
                                     title = snippet.getString(API_TITLE);
                                     description = snippet.getString(API_DESCRIPTION);
                                     JSONObject thumbnails = snippet.getJSONObject(API_THUMBNAILS);
                                     JSONObject medium = thumbnails.getJSONObject(API_MEDIUM);
+                                    JSONObject resourceId = snippet.getJSONObject(API_RESOURCEID);
+                                    id = resourceId.getString(API_ID);
                                     url = medium.getString(API_URL);
                                 }
                                 if(id != null && title != null && description != null && url != null){

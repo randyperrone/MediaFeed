@@ -60,6 +60,14 @@ public class ListVideosFragment extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        if(listOfVideos.isEmpty() || listOfVideos == null){
+            loadData();
+        }
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         layoutView = inflater.inflate(R.layout.fragment_list_videos, container, false);

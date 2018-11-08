@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Controllers.YoutubeActivity"></activity>
+        <activity android:name=".Controllers.YoutubeActivity" />
+        <activity android:name=".Controllers.YoutubePlayerActivity"></activity>
     </application>
 
 </manifest>
